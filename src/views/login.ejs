@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <title>Loša autentifikacija</title>
+    </head>
+    <body>
+        <div class="login-div" id="loginDiv">
+            <h2>Loša autentifikacija</h2>
+            <a href="/" class="sql-link">SQL umetanje</a>
+            <div class="chck-cont">
+                <input type="checkbox" name="BAvuln" id="BAvuln" value="vulnerable">
+                <label for="BAvuln">Ranjivost uključena</label>
+            </div>
+            <form id="loginForm">
+                <div class="usr-div">
+                    <label for="username">Korisničko ime: </label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+                <div class="passwd-div">
+                    <label for="password">Lozinka: </label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <input type="submit" id="submitBtn" value="Prijavi se" class="subm-btn">
+            </form>
+            <div class="login-mess"></div>
+        </div>
+        <script src="/site2.js"></script>
+    </body>
+</html>

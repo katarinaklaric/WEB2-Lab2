@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <title>SQL umetanje</title>
+    </head>
+    <body>
+        <div class="order">
+            <h2>SQL umetanje</h2>
+            <a href="/login" class="login-link">Loša autentifikacija</a>
+            <div class="chck-cont">
+                <input type="checkbox" name="SQLvuln" id="SQLvuln" value="vulnerable">
+                <label for="SQLvuln" class="chck-lbl">Ranjivost uključena</label>
+            </div>
+            <div class="ord-cont">
+                <label for="orderId">Unesite broj narudžbe: </label>
+                <input type="text" id="orderId" name="orderId">
+                <input type="button" id="subbtn" value="Pošalji">
+            </div>
+            <div class="ord-info"></div>
+        </div>
+        <script src="/site.js"></script>
+    </body>
+</html>
