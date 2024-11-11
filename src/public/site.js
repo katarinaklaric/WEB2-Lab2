@@ -11,19 +11,16 @@ function convertDate(date) {
 
 document.getElementById("subbtn").addEventListener("click", function () {
     let ordPath = '';
-    let body = '';
     if(document.getElementById("SQLvuln").checked) {
-        ordPath = '/getOrderInfo'; 
-        body = `orderId=${document.getElementById("orderId").value}`;
+        ordPath = '/getOrderInfo';
     } else {
         ordPath = '/getOrderInfoSecure';
-        body = `orderId=${encodeURIComponent(document.getElementById("orderId").value)}`;
     }
 
     fetch(ordPath, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body
+        body: `orderId=${encodeURIComponent(document.getElementById("orderId").value)}`
     }).then(res => res.json()).then(data => {
         const orderInfo = document.querySelector('.ord-info');
         orderInfo.innerHTML = '';
